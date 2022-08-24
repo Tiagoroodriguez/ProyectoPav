@@ -20,8 +20,4 @@ namespace MIPrimerProyecto
         }
     }
 }
-<<<<<<< HEAD
-//COMENTARIO GASPAR
-=======
-// prueba
->>>>>>> 5139058afcf950d767f678fd3189c4689f9740e5
+// comentario pruebaa
