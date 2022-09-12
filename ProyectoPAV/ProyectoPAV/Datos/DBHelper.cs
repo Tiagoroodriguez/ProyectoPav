@@ -19,7 +19,7 @@ namespace ProyectoPAV.Datos
         {
             conexion = new SqlConnection();
             comando = new SqlCommand();
-            //cadenaConexion =
+            cadenaConexion = "Data Source=DESKTOP-IC3GU53\\SQLEXPRESS;Initial Catalog=DB_Pav;Integrated Security=True";
         }
 
         public static DBHelper obtenerInstancia()
@@ -35,7 +35,6 @@ namespace ProyectoPAV.Datos
             DataTable tabla = new DataTable();
             conexion.ConnectionString = cadenaConexion;
             conexion.Open();
-
             comando.Connection = conexion;
             comando.CommandType = CommandType.Text;
             comando.CommandText = consultaSQL;

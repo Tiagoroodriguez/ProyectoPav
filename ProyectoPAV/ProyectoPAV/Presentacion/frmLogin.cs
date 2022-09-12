@@ -51,7 +51,9 @@ namespace ProyectoPAV.Presentacion
             if (miUsuario.Id_usuario != 0)
             {
                 MessageBox.Show("Login OK", "Ingreso al Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                frmUsuario ventana = new frmUsuario();
+                ventana.Show();
+                this.Hide();
             }
             else
             {
@@ -65,6 +67,11 @@ namespace ProyectoPAV.Presentacion
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void frmLogin_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

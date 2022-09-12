@@ -65,6 +65,7 @@
             // 
             this.txtClave.Location = new System.Drawing.Point(113, 84);
             this.txtClave.Name = "txtClave";
+            this.txtClave.PasswordChar = '*';
             this.txtClave.Size = new System.Drawing.Size(168, 20);
             this.txtClave.TabIndex = 3;
             // 
@@ -99,8 +100,11 @@
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.lblClave);
             this.Controls.Add(this.lblUsuario);
+            this.MaximizeBox = false;
             this.Name = "frmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.frmLogin_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

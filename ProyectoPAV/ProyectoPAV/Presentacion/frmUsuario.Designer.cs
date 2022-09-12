@@ -260,6 +260,7 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblIdUsuario);
             this.Name = "frmUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuarios";
             ((System.ComponentModel.ISupportInitialize)(this.grdUsuario)).EndInit();
             this.ResumeLayout(false);

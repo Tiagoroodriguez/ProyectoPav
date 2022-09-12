@@ -126,20 +126,11 @@
   <metadata name="Email.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="ID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Nombre.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Email.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnAgregarU.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAI
-        2QAACNkBslI6ygAAAtVJREFUWEftlltIU3Ecx89sNJ/qpYeILi9dkKiHHsIwCDOzmyu7mBqhUQ8RzVtC
+        2AAACNgBYBXYLgAAAtVJREFUWEftlltIU3Ecx89sNJ/qpYeILi9dkKiHHsIwCDOzmyu7mBqhUQ8RzVtC
         DVtKoFFELz4YJNSDKdrphpZlWbQKVtasBJslpEttHI1MpIumv37n7Mfa/vuf4zmbRA994fMwtvP5ft3/
         bFMIRJTikefIOAK6aO77Lnx5nUSGKCJKc5CvIXI93O8FHDCCJJApwojS4TC5HvwDZIaQFWSLIKJUEibX
         w58BMgPIUjIajCiVhsn1EDpAph9ZSFYDiXRAUz87QKYbmU9mnYl0gEyXhzfiHTKb7DoSzYCriNMLwrMP
@@ -160,7 +151,7 @@
   <data name="btnSalirU.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EAAACxABrSO9dQAAAbJJREFUWEftlzFLw1AURjOIuyBVxEV0VUdxt4hOghYFFyld+xPc3NydBLspBYUq
+        DwAACw8BkvkDpQAAAbJJREFUWEftlzFLw1AURjOIuyBVxEV0VUdxt4hOghYFFyld+xPc3NydBLspBYUq
         /gGdxdXiL3BOUqjaxu/VG3y5uc3NI+1Q8IOztPWeg1RpvdpjpwTuQfe41YnK12G0fhlESxe+C9/gFRx6
         roP4AUScAjF1Op1vkH1yOSeOWcsXE4IZOq9PEmaxjRAmlNil8/okicaq/puo0Hl9kkBjozFBASen5/Ng
         B0zRQ8lJAg3HgHcQgRaYpof/Jgk0HAOMPCYdIQk0WMAHOANHoEIs0nkekI6QBBpWwAuYpVPimDwdIQk0
@@ -173,7 +164,7 @@
   <data name="btnCancelarU.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
-        0wAADdMBvdUcagAAAsBJREFUWEfFl9tqE1EUhpOWVm/EK4OXUgTxgJd9D0FarTeF9lLwMYQ+gug7tChF
+        0gAADdIBb5L+jgAAAsBJREFUWEfFl9tqE1EUhpOWVm/EK4OXUgTxgJd9D0FarTeF9lLwMYQ+gug7tChF
         8REERVraR5BU8Sop2kPq9+9Zk+xZsyeZSSP94SdkZs361uzztOrqYnn5Bn6G3+Av+Cc+7bXbA/wbf8Xv
         enNzL/qLizftscsLyJJBe/jCu0dIwscU87Y/P3/X0jQXya/h1/hvDks5AY99QiFbtMh1S1tPJL6Dv8Wg
         hI/wHoBD/CsBH7nd/k5rLFn68SLpI/zDILHP8DZewbcsfKj+wsJt+n8N2Aeg56UiWq0u9x9beFok1pun

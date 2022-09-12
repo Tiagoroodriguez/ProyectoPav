@@ -12,7 +12,7 @@ namespace ProyectoPAV.Datos.Daos
     {
         public int validarUsuario(string nombre, string clave)
         {
-            string consulta = "SELECT * FROM Usuarios WHERE usuario='" + nombre + "' AND password='" + clave + "'";
+            string consulta = "SELECT * FROM Usuarios WHERE nombreUsu='" + nombre + "' AND claveUsu='" + clave + "'";
 
             DataTable tabla = DBHelper.obtenerInstancia().consultar(consulta);
             if (tabla.Rows.Count > 0)
