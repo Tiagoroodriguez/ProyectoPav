@@ -43,6 +43,7 @@ namespace ProyectoPAV.Presentacion
         {
             
             txtClave.Enabled = v;
+            txtLegajo.Enabled = v;
             txtMail.Enabled = v;
             txtNombre.Enabled = v;
             cboPerfil.Enabled = v;
@@ -56,10 +57,10 @@ namespace ProyectoPAV.Presentacion
         
         private void LimpiarCampos()
         {
-            txtIdUsuario.Text = String.Empty;
             txtMail.Text = String.Empty;
             txtNombre.Text = String.Empty;
             txtClave.Text = String.Empty;
+            txtLegajo.Text = String.Empty;
             cboPerfil.SelectedIndex = -1;
         }
 
@@ -120,23 +121,23 @@ namespace ProyectoPAV.Presentacion
                     if (ValidarCampos())
                     {
                         var usuarioCreado = new Usuario();
-                        usuarioCreado.Id_usuario = Convert.ToInt32(txtIdUsuario.Text);
                         usuarioCreado.Nombre = txtNombre.Text;
                         usuarioCreado.Password = txtClave.Text;
                         usuarioCreado.Legajo = Convert.ToInt32(txtLegajo.Text);
                         usuarioCreado.Email = txtMail.Text;
-                        //usuarioCreado.Perfil.idCargo = (int)cboPerfil.SelectedValue;
-                        
+                        usuarioCreado.Perfil = new Perfil();
+                        usuarioCreado.Perfil.idCargo = (int)cboPerfil.SelectedValue;
+
 
                         if (oUsuario.CrearUsuario(usuarioCreado))
                         {
                             MessageBox.Show("Se ha creado el usuario con exito", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.Close();                       
+                            this.Close();
                         }
                         else
                         {
                             MessageBox.Show("No se ha podido crear el usuario, intentelo nuevamente");
-                        }    
+                        }
 
                     }
                 }
@@ -169,37 +170,36 @@ namespace ProyectoPAV.Presentacion
         private bool ExisteUsuario()
         {
             if (oUsuario.ObtenerUsuario(txtNombre.Text) == null)
-                {
+            {
                 return false;
-                }
+            }
             else
+                MessageBox.Show("Ya existe un usario con ese nombre! Ingrese uno diferente.");
                 return true;
             
         }
         //Valida que los campos obligatorios no esten vacios
         private bool ValidarCampos()
         {
-            if (txtIdUsuario.Text == String.Empty)
-            {
-                txtIdUsuario.BackColor = Color.Red;
-                MessageBox.Show("Ingrese un id de usuario!");
-                txtIdUsuario.Focus();
-                return false;
-            }
             if (txtNombre.Text == String.Empty)
             {
-                txtNombre.BackColor = Color.Red;
                 MessageBox.Show("Ingrese un nombre de usuario!");
                 txtNombre.Focus();
                 return false;
             }
             if (txtLegajo.Text == String.Empty)
             {
-                txtLegajo.BackColor = Color.Red;
                 MessageBox.Show("Ingrese un Legajo!");
                 txtLegajo.Focus();
                 return false;
             }  
+
+            if (cboPerfil.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleccione un cargo para el usuario!");
+                cboPerfil.Focus();
+                return false;
+            }
             return true;
 
         }

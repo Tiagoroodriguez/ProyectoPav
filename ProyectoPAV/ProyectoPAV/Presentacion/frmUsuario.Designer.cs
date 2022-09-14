@@ -30,12 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuario));
-            this.lblIdUsuario = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblClave = new System.Windows.Forms.Label();
             this.lblMail = new System.Windows.Forms.Label();
             this.lblPerfil = new System.Windows.Forms.Label();
-            this.txtIdUsuario = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtClave = new System.Windows.Forms.TextBox();
             this.txtMail = new System.Windows.Forms.TextBox();
@@ -56,19 +54,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdUsuario)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblIdUsuario
-            // 
-            this.lblIdUsuario.AutoSize = true;
-            this.lblIdUsuario.Location = new System.Drawing.Point(226, 14);
-            this.lblIdUsuario.Name = "lblIdUsuario";
-            this.lblIdUsuario.Size = new System.Drawing.Size(58, 13);
-            this.lblIdUsuario.TabIndex = 0;
-            this.lblIdUsuario.Text = "Id Usuario:";
-            // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(226, 40);
+            this.lblNombre.Location = new System.Drawing.Point(226, 20);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(47, 13);
             this.lblNombre.TabIndex = 1;
@@ -77,7 +66,7 @@
             // lblClave
             // 
             this.lblClave.AutoSize = true;
-            this.lblClave.Location = new System.Drawing.Point(226, 105);
+            this.lblClave.Location = new System.Drawing.Point(226, 101);
             this.lblClave.Name = "lblClave";
             this.lblClave.Size = new System.Drawing.Size(64, 13);
             this.lblClave.TabIndex = 2;
@@ -86,7 +75,7 @@
             // lblMail
             // 
             this.lblMail.AutoSize = true;
-            this.lblMail.Location = new System.Drawing.Point(226, 140);
+            this.lblMail.Location = new System.Drawing.Point(226, 137);
             this.lblMail.Name = "lblMail";
             this.lblMail.Size = new System.Drawing.Size(38, 13);
             this.lblMail.TabIndex = 3;
@@ -101,30 +90,23 @@
             this.lblPerfil.TabIndex = 4;
             this.lblPerfil.Text = "Perfil:";
             // 
-            // txtIdUsuario
-            // 
-            this.txtIdUsuario.Location = new System.Drawing.Point(336, 11);
-            this.txtIdUsuario.Name = "txtIdUsuario";
-            this.txtIdUsuario.Size = new System.Drawing.Size(222, 20);
-            this.txtIdUsuario.TabIndex = 5;
-            // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(336, 40);
+            this.txtNombre.Location = new System.Drawing.Point(336, 20);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(222, 20);
             this.txtNombre.TabIndex = 6;
             // 
             // txtClave
             // 
-            this.txtClave.Location = new System.Drawing.Point(336, 103);
+            this.txtClave.Location = new System.Drawing.Point(336, 94);
             this.txtClave.Name = "txtClave";
             this.txtClave.Size = new System.Drawing.Size(222, 20);
             this.txtClave.TabIndex = 7;
             // 
             // txtMail
             // 
-            this.txtMail.Location = new System.Drawing.Point(336, 137);
+            this.txtMail.Location = new System.Drawing.Point(336, 134);
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(222, 20);
             this.txtMail.TabIndex = 8;
@@ -242,7 +224,7 @@
             // lblLegajo
             // 
             this.lblLegajo.AutoSize = true;
-            this.lblLegajo.Location = new System.Drawing.Point(226, 72);
+            this.lblLegajo.Location = new System.Drawing.Point(226, 58);
             this.lblLegajo.Name = "lblLegajo";
             this.lblLegajo.Size = new System.Drawing.Size(42, 13);
             this.lblLegajo.TabIndex = 17;
@@ -250,7 +232,8 @@
             // 
             // txtLegajo
             // 
-            this.txtLegajo.Location = new System.Drawing.Point(336, 69);
+            this.txtLegajo.Enabled = false;
+            this.txtLegajo.Location = new System.Drawing.Point(336, 55);
             this.txtLegajo.Name = "txtLegajo";
             this.txtLegajo.Size = new System.Drawing.Size(222, 20);
             this.txtLegajo.TabIndex = 18;
@@ -273,12 +256,10 @@
             this.Controls.Add(this.txtMail);
             this.Controls.Add(this.txtClave);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.txtIdUsuario);
             this.Controls.Add(this.lblPerfil);
             this.Controls.Add(this.lblMail);
             this.Controls.Add(this.lblClave);
             this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.lblIdUsuario);
             this.Name = "frmUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuarios";
@@ -290,13 +271,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblIdUsuario;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblClave;
         private System.Windows.Forms.Label lblMail;
         private System.Windows.Forms.Label lblPerfil;
-        private System.Windows.Forms.TextBox txtIdUsuario;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtClave;
         private System.Windows.Forms.TextBox txtMail;

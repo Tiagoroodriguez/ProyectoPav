@@ -52,14 +52,14 @@ namespace ProyectoPAV.Datos.Daos
         //Crea un nuevo usuario
         internal bool Crear(Usuario oUsuario)
         {
-            string consultaSql = "INSERT INTO Usuarios (idUsuario, nombreUsu, claveUsu, legajoUsu, emailUsu, idCargoUsu, borrado)" +
+            string consultaSql = "INSERT INTO Usuarios (nombreUsu, claveUsu, legajoUsu, emailUsu, idCargoUsu, borrado)" +
                                 " VALUES (" +
-                                "'" + oUsuario.Id_usuario + "'" + "," +
                                 "'" + oUsuario.Nombre + "'" + "," +
                                 "'" + oUsuario.Password + "'" + "," +
                                 "'" + oUsuario.Legajo + "'" + "," +
-                                "'" + oUsuario.Email + "'" + ",";
-                                //"'" + oUsuario.Perfil + "'" + ",";
+                                "'" + oUsuario.Email + "'" + "," + 
+                                oUsuario.Perfil.idCargo + ",0)";
+
             return (DBHelper.obtenerInstancia().ModificacionSQL(consultaSql) == 1);
                                 
         }
