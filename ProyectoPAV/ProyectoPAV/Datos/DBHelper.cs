@@ -44,5 +44,43 @@ namespace ProyectoPAV.Datos
             return tabla;
         }
 
+        public int ModificacionSQL(string strSql)
+        {
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlTransaction t = null;
+            int rtdo = 0;
+
+            try
+            {
+                // Establece que conexión usar
+                conexion.ConnectionString = cadenaConexion;
+                // Abre la conexión
+                conexion.Open();
+                t = conexion.BeginTransaction();
+                cmd.Connection = conexion;
+                cmd.Transaction = t;
+                cmd.CommandType = CommandType.Text;
+                // Establece la instrucción a ejecutar
+                cmd.CommandText = strSql;
+                // Retorna el resultado de ejecutar el comando
+                rtdo = cmd.ExecuteNonQuery();
+                t.Commit();
+            }
+            catch (Exception ex)
+            {
+                if (t != null)
+                    t.Rollback();
+            }
+            finally
+            {
+                // Cierra la conexión 
+                if (conexion.State == ConnectionState.Open)
+                    conexion.Close();
+                conexion.Dispose();
+            }
+            return rtdo;
+        }
+
     }
 }

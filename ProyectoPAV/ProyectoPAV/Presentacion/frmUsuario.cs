@@ -31,13 +31,12 @@ namespace ProyectoPAV.Presentacion
             InitializeComponent();
         }
 
-        private void frmUsuarios_Load(object sender, EventArgs e)
+        private void frmUsuario_Load(object sender, EventArgs e)
         {
             CargarCombo(cboPerfil, oPerfil.traerTodos());
             CargarGrilla(grdUsuario, oUsuario.traerTodos());
             HabilitarModoEdicion(false);
             MiAccion = Acciones.Modificacion;
-
         }
         
         private void HabilitarModoEdicion(bool v)
@@ -77,9 +76,9 @@ namespace ProyectoPAV.Presentacion
             grilla.Rows.Clear();
             for (int i = 0; i < tabla.Rows.Count; i++)
             {
-                grilla.Rows.Add(tabla.Rows[i]["id_usuario"],
-                                tabla.Rows[i]["usuario"],
-                                tabla.Rows[i]["email"]);
+                grilla.Rows.Add(tabla.Rows[i]["idUsuario"],
+                                tabla.Rows[i]["nombreUsu"],
+                                tabla.Rows[i]["emailUsu"]);
             }
         }
         private void btnAgregarU_Click(object sender, EventArgs e)
@@ -115,6 +114,36 @@ namespace ProyectoPAV.Presentacion
 
             if (MiAccion == Acciones.Alta)
             {
+                
+                if (ExisteUsuario() == false)
+                {
+                    if (ValidarCampos())
+                    {
+                        var usuarioCreado = new Usuario();
+                        usuarioCreado.Id_usuario = Convert.ToInt32(txtIdUsuario.Text);
+                        usuarioCreado.Nombre = txtNombre.Text;
+                        usuarioCreado.Password = txtClave.Text;
+                        usuarioCreado.Legajo = Convert.ToInt32(txtLegajo.Text);
+                        usuarioCreado.Email = txtMail.Text;
+                        //usuarioCreado.Perfil.idCargo = (int)cboPerfil.SelectedValue;
+                        
+
+                        if (oUsuario.CrearUsuario(usuarioCreado))
+                        {
+                            MessageBox.Show("Se ha creado el usuario con exito", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();                       
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se ha podido crear el usuario, intentelo nuevamente");
+                        }    
+
+                    }
+                }
+                else
+                {
+                    
+                }
                 //INSERT
             }
             else
@@ -135,6 +164,44 @@ namespace ProyectoPAV.Presentacion
         private void btnSalirU_Click(object sender, EventArgs e)
         {
             Close();
+        }   
+        //Llama al metodo que busca al usuario en la base de datos
+        private bool ExisteUsuario()
+        {
+            if (oUsuario.ObtenerUsuario(txtNombre.Text) == null)
+                {
+                return false;
+                }
+            else
+                return true;
+            
+        }
+        //Valida que los campos obligatorios no esten vacios
+        private bool ValidarCampos()
+        {
+            if (txtIdUsuario.Text == String.Empty)
+            {
+                txtIdUsuario.BackColor = Color.Red;
+                MessageBox.Show("Ingrese un id de usuario!");
+                txtIdUsuario.Focus();
+                return false;
+            }
+            if (txtNombre.Text == String.Empty)
+            {
+                txtNombre.BackColor = Color.Red;
+                MessageBox.Show("Ingrese un nombre de usuario!");
+                txtNombre.Focus();
+                return false;
+            }
+            if (txtLegajo.Text == String.Empty)
+            {
+                txtLegajo.BackColor = Color.Red;
+                MessageBox.Show("Ingrese un Legajo!");
+                txtLegajo.Focus();
+                return false;
+            }  
+            return true;
+
         }
     }
 }

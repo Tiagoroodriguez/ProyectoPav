@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 using System.Data;
 using ProyectoPAV.Datos.Daos;
 using ProyectoPAV.Datos.Interfaces;
+using ProyectoPAV.Entidades;
 
 namespace ProyectoPAV.Servicios
 {
     class UsuarioService
     {
-        private IUsuario dao;
+        private UsuarioDao dao;
 
         public UsuarioService()
         {
@@ -28,6 +29,16 @@ namespace ProyectoPAV.Servicios
         public DataTable traerPorId(int idUsuario)
         {
             return dao.RecuperarPorId(idUsuario);
+        }
+        //Chequea que no exista un usuario con el mismo nombre que se ingresa por parametro
+        internal object ObtenerUsuario(string usuario)
+        {
+            return dao.RecuperarPorNombre(usuario);
+        }
+        //Invoca al metodo que crea el usuario
+        internal bool CrearUsuario(Usuario oUsuario)
+        {
+            return dao.Crear(oUsuario);
         }
     }
 }

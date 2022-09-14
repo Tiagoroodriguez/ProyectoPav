@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ProyectoPAV.Entidades;
 
 namespace ProyectoPAV.Entidades
 {
@@ -13,7 +14,7 @@ namespace ProyectoPAV.Entidades
         public string Password { get; set; }
         public int Legajo { get; set; }
         public string Email { get; set; }
-        public int Id_cargo { get; set; }
+        public Perfil Perfil { get; set; }
         //public string Estado { get; set; }
         public bool Borrado { get; set; }
     }

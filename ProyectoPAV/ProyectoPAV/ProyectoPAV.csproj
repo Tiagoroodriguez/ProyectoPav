@@ -51,6 +51,7 @@
     <Compile Include="Datos\DBHelper.cs" />
     <Compile Include="Datos\Interfaces\IPerfil.cs" />
     <Compile Include="Datos\Interfaces\IUsuario.cs" />
+    <Compile Include="Entidades\Perfil.cs" />
     <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="Presentacion\frmLogin.cs">
       <SubType>Form</SubType>

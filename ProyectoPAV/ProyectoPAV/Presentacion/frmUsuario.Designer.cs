@@ -51,13 +51,15 @@
             this.btnSalirU = new System.Windows.Forms.Button();
             this.btnGuardarU = new System.Windows.Forms.Button();
             this.btnCancelarU = new System.Windows.Forms.Button();
+            this.lblLegajo = new System.Windows.Forms.Label();
+            this.txtLegajo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.grdUsuario)).BeginInit();
             this.SuspendLayout();
             // 
             // lblIdUsuario
             // 
             this.lblIdUsuario.AutoSize = true;
-            this.lblIdUsuario.Location = new System.Drawing.Point(226, 38);
+            this.lblIdUsuario.Location = new System.Drawing.Point(226, 14);
             this.lblIdUsuario.Name = "lblIdUsuario";
             this.lblIdUsuario.Size = new System.Drawing.Size(58, 13);
             this.lblIdUsuario.TabIndex = 0;
@@ -66,7 +68,7 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(226, 68);
+            this.lblNombre.Location = new System.Drawing.Point(226, 40);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(47, 13);
             this.lblNombre.TabIndex = 1;
@@ -101,14 +103,14 @@
             // 
             // txtIdUsuario
             // 
-            this.txtIdUsuario.Location = new System.Drawing.Point(336, 36);
+            this.txtIdUsuario.Location = new System.Drawing.Point(336, 11);
             this.txtIdUsuario.Name = "txtIdUsuario";
             this.txtIdUsuario.Size = new System.Drawing.Size(222, 20);
             this.txtIdUsuario.TabIndex = 5;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(336, 66);
+            this.txtNombre.Location = new System.Drawing.Point(336, 40);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(222, 20);
             this.txtNombre.TabIndex = 6;
@@ -122,7 +124,7 @@
             // 
             // txtMail
             // 
-            this.txtMail.Location = new System.Drawing.Point(336, 138);
+            this.txtMail.Location = new System.Drawing.Point(336, 137);
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(222, 20);
             this.txtMail.TabIndex = 8;
@@ -237,11 +239,29 @@
             this.btnCancelarU.UseVisualStyleBackColor = true;
             this.btnCancelarU.Click += new System.EventHandler(this.btnCancelarU_Click);
             // 
+            // lblLegajo
+            // 
+            this.lblLegajo.AutoSize = true;
+            this.lblLegajo.Location = new System.Drawing.Point(226, 72);
+            this.lblLegajo.Name = "lblLegajo";
+            this.lblLegajo.Size = new System.Drawing.Size(42, 13);
+            this.lblLegajo.TabIndex = 17;
+            this.lblLegajo.Text = "Legajo:";
+            // 
+            // txtLegajo
+            // 
+            this.txtLegajo.Location = new System.Drawing.Point(336, 69);
+            this.txtLegajo.Name = "txtLegajo";
+            this.txtLegajo.Size = new System.Drawing.Size(222, 20);
+            this.txtLegajo.TabIndex = 18;
+            // 
             // frmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtLegajo);
+            this.Controls.Add(this.lblLegajo);
             this.Controls.Add(this.btnCancelarU);
             this.Controls.Add(this.btnGuardarU);
             this.Controls.Add(this.btnSalirU);
@@ -262,6 +282,7 @@
             this.Name = "frmUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuarios";
+            this.Load += new System.EventHandler(this.frmUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdUsuario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -291,5 +312,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.Label lblLegajo;
+        private System.Windows.Forms.TextBox txtLegajo;
     }
 }

@@ -12,7 +12,7 @@ namespace ProyectoPAV.Datos.Daos
     {
         public DataTable RecuperarTodos()
         {
-            string consulta = "SELECT * FROM Perfiles WHERE borrado = 0 order by 2";
+            string consulta = "SELECT * FROM Cargos WHERE borrado = 0 order by 2";
             return DBHelper.obtenerInstancia().consultar(consulta);
         }
     }

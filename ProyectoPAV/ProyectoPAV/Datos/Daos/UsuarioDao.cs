@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using ProyectoPAV.Datos.Interfaces;
+using ProyectoPAV.Entidades;
 
 namespace ProyectoPAV.Datos.Daos
 {
@@ -23,7 +24,7 @@ namespace ProyectoPAV.Datos.Daos
         }
         public DataTable RecuperarTodos()
         {
-            string consulta = "SELECT * FROM Usuarios WHERE borrado = 0 order by usuario";
+            string consulta = "SELECT * FROM Usuarios WHERE borrado = 0 order by idUsuario";
 
             return DBHelper.obtenerInstancia().consultar(consulta);
         }
@@ -34,5 +35,34 @@ namespace ProyectoPAV.Datos.Daos
             return DBHelper.obtenerInstancia().consultar(consulta);
             
         }
+
+        public DataTable RecuperarPorNombre(string nombreUsuario)
+        {
+            string consulta = "SELECT * FROM Usuarios WHERE nombreUsu=" + "'" + nombreUsuario + "'";
+            var resultado = DBHelper.obtenerInstancia().consultar(consulta);
+            if (resultado.Rows.Count > 0)
+            {
+                return resultado;
+            }    
+            else
+            {
+                return null;
+            }
+        }
+        //Crea un nuevo usuario
+        internal bool Crear(Usuario oUsuario)
+        {
+            string consultaSql = "INSERT INTO Usuarios (idUsuario, nombreUsu, claveUsu, legajoUsu, emailUsu, idCargoUsu, borrado)" +
+                                " VALUES (" +
+                                "'" + oUsuario.Id_usuario + "'" + "," +
+                                "'" + oUsuario.Nombre + "'" + "," +
+                                "'" + oUsuario.Password + "'" + "," +
+                                "'" + oUsuario.Legajo + "'" + "," +
+                                "'" + oUsuario.Email + "'" + ",";
+                                //"'" + oUsuario.Perfil + "'" + ",";
+            return (DBHelper.obtenerInstancia().ModificacionSQL(consultaSql) == 1);
+                                
+        }
+
     }
 }
