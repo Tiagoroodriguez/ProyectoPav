@@ -60,12 +60,12 @@ namespace ProyectoPAV.Presentacion
 
         private void HabilitarModoConsulta(bool v)
         {
-            txtClave.Enabled = v;
-            txtLegajo.Enabled = v;
+            txtClave.Enabled = !v;
+            txtLegajo.Enabled = !v;
             txtMail.Enabled = !v;
-            txtNombre.Enabled = v;
-            txtApellido.Enabled = v;
-            cboPerfil.Enabled = v;
+            txtNombre.Enabled = !v;
+            txtApellido.Enabled = !v;
+            cboPerfil.Enabled = !v;
             btnGuardarU.Enabled = !v;
             btnCancelarU.Enabled = !v;
             btnAgregarU.Enabled = v;
@@ -106,6 +106,7 @@ namespace ProyectoPAV.Presentacion
                                 tabla.Rows[i]["nombreUsu"],
                                 tabla.Rows[i]["emailUsu"]);
             }
+            grilla.Focus();
         }
         private void btnAgregarU_Click(object sender, EventArgs e)
         {
@@ -119,12 +120,9 @@ namespace ProyectoPAV.Presentacion
         {
             HabilitarModoEdicion(true);
             MiAccion = Acciones.Modificacion;
-            MessageBox.Show("Ingrese el nombre del usuario y los datos que desea modificar.");
+            MessageBox.Show("Seleccione un usuario de la grilla, y modifique los campos.");
+            CargarGrilla(grdUsuario, oUsuario.traerTodos());
             txtNombre.Enabled = true;
-            if (ExisteUsuario() == true)
-            {
-                MessageBox.Show("Se ha encontrado el usuario. Se han habilitado los campos para realizar modificaciones");
-            }
         }
 
 
@@ -295,8 +293,25 @@ namespace ProyectoPAV.Presentacion
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            
+            CargarGrilla(grdUsuario, oUsuario.traerTodos());
+            btnConsultar.Enabled = false;
+        }
 
+        private void CargarCampos(int idUsuario)
+        {
+            DataTable tabla = oUsuario.traerPorId(idUsuario);
+            txtNombre.Text = tabla.Rows[0]["nombreUsu"].ToString();
+            //txtApellido.Text = tabla.Rows[0]["apellidoUsu"].ToString();
+            txtClave.Text = tabla.Rows[0]["claveUsu"].ToString();
+            txtMail.Text = tabla.Rows[0]["emailUsu"].ToString();
+            cboPerfil.SelectedValue = tabla.Rows[0]["idCargoUsu"];
+
+        
+        }
+
+        private void grdUsuario_SelectionChanged(object sender, EventArgs e)
+        {
+            CargarCampos((int)grdUsuario.CurrentRow.Cells[0].Value);
         }
     }
 }

@@ -139,6 +139,7 @@
             this.grdUsuario.Size = new System.Drawing.Size(776, 169);
             this.grdUsuario.TabIndex = 10;
             this.grdUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdUsuario_CellContentClick);
+            this.grdUsuario.SelectionChanged += new System.EventHandler(this.grdUsuario_SelectionChanged);
             // 
             // ID
             // 
@@ -265,7 +266,7 @@
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(122, 26);
             this.btnConsultar.TabIndex = 21;
-            this.btnConsultar.Text = "Consultar";
+            this.btnConsultar.Text = "Mostrar Usuarios";
             this.btnConsultar.UseVisualStyleBackColor = true;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 

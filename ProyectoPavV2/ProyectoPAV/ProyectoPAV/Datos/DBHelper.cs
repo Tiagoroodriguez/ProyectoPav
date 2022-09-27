@@ -19,7 +19,7 @@ namespace ProyectoPAV.Datos
         {
             conexion = new SqlConnection();
             comando = new SqlCommand();
-            cadenaConexion = "Data Source=maquis;Initial Catalog=BD_PAV82037;User ID=Avisuales1;Password=Pav1#2020Maquis";
+            cadenaConexion = "Data Source=DESKTOP-IC3GU53\\SQLEXPRESS;Initial Catalog=DB_Pav;Integrated Security=True";
         }
 
         public static DBHelper obtenerInstancia()

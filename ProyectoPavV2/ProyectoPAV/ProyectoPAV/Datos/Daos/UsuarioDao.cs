@@ -31,7 +31,7 @@ namespace ProyectoPAV.Datos.Daos
          
         public DataTable RecuperarPorId(int idUsuario)
         {
-            string consulta = "SELECT * FROM Usuarios WHERE borrado = 0 AND id_usuario =" + idUsuario;
+            string consulta = "SELECT * FROM Usuarios WHERE borrado = 0 AND idUsuario =" + idUsuario;
             return DBHelper.obtenerInstancia().consultar(consulta);
             
         }

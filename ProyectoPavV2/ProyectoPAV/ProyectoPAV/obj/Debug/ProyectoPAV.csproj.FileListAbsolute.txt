@@ -34,3 +34,15 @@ D:\ProyectoPav\ProyectoPAV\ProyectoPAV\obj\Debug\ProyectoPAV.csproj.GenerateReso
 D:\ProyectoPav\ProyectoPAV\ProyectoPAV\obj\Debug\ProyectoPAV.csproj.CoreCompileInputs.cache
 D:\ProyectoPav\ProyectoPAV\ProyectoPAV\obj\Debug\ProyectoPAV.exe
 D:\ProyectoPav\ProyectoPAV\ProyectoPAV\obj\Debug\ProyectoPAV.pdb
+C:\Users\Aorus Z390\Documents\FACULTAD\Pav\ProyectoPavV2\ProyectoPAV\ProyectoPAV\bin\Debug\ProyectoPAV.exe.config
+C:\Users\Aorus Z390\Documents\FACULTAD\Pav\ProyectoPavV2\ProyectoPAV\ProyectoPAV\bin\Debug\ProyectoPAV.exe
+C:\Users\Aorus Z390\Documents\FACULTAD\Pav\ProyectoPavV2\ProyectoPAV\ProyectoPAV\bin\Debug\ProyectoPAV.pdb
+C:\Users\Aorus Z390\Documents\FACULTAD\Pav\ProyectoPavV2\ProyectoPAV\ProyectoPAV\obj\Debug\ProyectoPAV.csproj.AssemblyReference.cache
+C:\Users\Aorus Z390\Documents\FACULTAD\Pav\ProyectoPavV2\ProyectoPAV\ProyectoPAV\obj\Debug\ProyectoPAV.csproj.SuggestedBindingRedirects.cache
+C:\Users\Aorus Z390\Documents\FACULTAD\Pav\ProyectoPavV2\ProyectoPAV\ProyectoPAV\obj\Debug\ProyectoPAV.Presentacion.frmLogin.resources
+C:\Users\Aorus Z390\Documents\FACULTAD\Pav\ProyectoPavV2\ProyectoPAV\ProyectoPAV\obj\Debug\ProyectoPAV.Presentacion.frmUsuario.resources
+C:\Users\Aorus Z390\Documents\FACULTAD\Pav\ProyectoPavV2\ProyectoPAV\ProyectoPAV\obj\Debug\ProyectoPAV.Properties.Resources.resources
+C:\Users\Aorus Z390\Documents\FACULTAD\Pav\ProyectoPavV2\ProyectoPAV\ProyectoPAV\obj\Debug\ProyectoPAV.csproj.GenerateResource.cache
+C:\Users\Aorus Z390\Documents\FACULTAD\Pav\ProyectoPavV2\ProyectoPAV\ProyectoPAV\obj\Debug\ProyectoPAV.csproj.CoreCompileInputs.cache
+C:\Users\Aorus Z390\Documents\FACULTAD\Pav\ProyectoPavV2\ProyectoPAV\ProyectoPAV\obj\Debug\ProyectoPAV.exe
+C:\Users\Aorus Z390\Documents\FACULTAD\Pav\ProyectoPavV2\ProyectoPAV\ProyectoPAV\obj\Debug\ProyectoPAV.pdb

@@ -126,15 +126,6 @@
   <metadata name="Email.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="ID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Nombre.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Email.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnAgregarU.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -160,7 +151,7 @@
   <data name="btnSalirU.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAAAbJJREFUWEftlzFLw1AURjOIuyBVxEV0VUdxt4hOghYFFyld+xPc3NydBLspBYUq
+        DAAACwwBP0AiyAAAAbJJREFUWEftlzFLw1AURjOIuyBVxEV0VUdxt4hOghYFFyld+xPc3NydBLspBYUq
         /gGdxdXiL3BOUqjaxu/VG3y5uc3NI+1Q8IOztPWeg1RpvdpjpwTuQfe41YnK12G0fhlESxe+C9/gFRx6
         roP4AUScAjF1Op1vkH1yOSeOWcsXE4IZOq9PEmaxjRAmlNil8/okicaq/puo0Hl9kkBjozFBASen5/Ng
         B0zRQ8lJAg3HgHcQgRaYpof/Jgk0HAOMPCYdIQk0WMAHOANHoEIs0nkekI6QBBpWwAuYpVPimDwdIQk0
